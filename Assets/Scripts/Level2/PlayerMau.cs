@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,7 @@ public class PlayerMau : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
     public GameObject gameOverManager;  // Tham chiếu đến GameOverManager
+
 
     void Start()
     {

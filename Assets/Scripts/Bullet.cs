@@ -22,27 +22,36 @@ public class Bullet : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy") || collision.CompareTag("Enemy2"))
         {
             EnemyMau enemyHealth = collision.GetComponent<EnemyMau>();
             if (enemyHealth != null)
             {
-                enemyHealth.TakeDamage();  // Gọi hàm trừ máu
-                //Debug.Log("Bắn trúng Enemy!"); // In ra console kiểm tra
+                enemyHealth.TakeDamage();  // Giảm máu của enemy  
             }
-            Destroy(gameObject);  // Hủy viên đạn
+            Destroy(gameObject);  // Hủy viên đạn sau khi trúng enemy  
         }
-        else if (collision.CompareTag("Enemy2"))
-        {
-            EnemyMau enemyHealth = collision.GetComponent<EnemyMau>();
-            if (enemyHealth != null)
-            {
-                enemyHealth.TakeDamage();  // Gọi hàm trừ máu
-                //Debug.Log("Bắn trúng Enemy!"); // In ra console kiểm tra
-            }
-            Destroy(gameObject);  // Hủy viên đạn
+        //if (collision.CompareTag("Enemy"))
+        //{
+        //    EnemyMau enemyHealth = collision.GetComponent<EnemyMau>();
+        //    if (enemyHealth != null)
+        //    {
+        //        enemyHealth.TakeDamage();  // Gọi hàm trừ máu
+        //        //Debug.Log("Bắn trúng Enemy!"); // In ra console kiểm tra
+        //    }
+        //    Destroy(gameObject);  // Hủy viên đạn
+        //}
+        //else if (collision.CompareTag("Enemy2"))
+        //{
+        //    EnemyMau enemyHealth = collision.GetComponent<EnemyMau>();
+        //    if (enemyHealth != null)
+        //    {
+        //        enemyHealth.TakeDamage();  // Gọi hàm trừ máu
+        //        //Debug.Log("Bắn trúng Enemy!"); // In ra console kiểm tra
+        //    }
+        //    Destroy(gameObject);  // Hủy viên đạn
 
-        }
+        //}
 
 
     }

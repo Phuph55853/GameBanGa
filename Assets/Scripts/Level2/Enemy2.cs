@@ -8,6 +8,8 @@ public class Enemy2 : MonoBehaviour
     public Transform eggSpawnPoint; // Vị trí đẻ trứng
     public float eggSpawnInterval = 3f; // Khoảng thời gian đẻ trứng
     public float moveSpeed = 2f; // Tốc độ di chuyển ngang
+    public int health = 3;  // Enemy2 có 3 máu
+
 
     private bool movingRight = true;
 
@@ -44,8 +46,26 @@ public class Enemy2 : MonoBehaviour
     {
         if (collision.CompareTag("Bullet"))
         {
-            Destroy(gameObject);
+            TakeDamage();  // Gọi hàm trừ máu
+            //Destroy(gameObject);
             Destroy(collision.gameObject);
         }
+    }
+
+    void TakeDamage()
+    {
+        health--;  // Mỗi lần trúng đạn thì giảm 1 máu
+        Debug.Log("Enemy2 bị bắn! Máu còn: " + health);
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Debug.Log("Enemy2 đã chết!");
+        Destroy(gameObject);  // Hủy enemy2
     }
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4586831941294787595}
   - component: {fileID: 1185783620348681595}
   - component: {fileID: 964696877312550337}
+  - component: {fileID: -7845213837040537949}
   m_Layer: 0
   m_Name: "\u0110\xF9i g\xE0"
   m_TagString: Drumstick
@@ -142,9 +143,22 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.013376882, y: -0.07022841}
   m_Size: {x: 0.34675366, y: 0.4064273}
   m_Direction: 0
+--- !u!114 &-7845213837040537949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7764833147169045365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d05b2f02ed7832441af7806e54df8907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healAmount: 1
