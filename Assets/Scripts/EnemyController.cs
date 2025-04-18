@@ -14,4 +14,11 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(gameObject); // Enemy chết
+        }
+    }
 }
