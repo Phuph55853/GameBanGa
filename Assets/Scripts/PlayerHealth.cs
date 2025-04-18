@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
 
     public GameObject[] hearts;  // Mảng chứa hình trái tim
 
-    public TextMeshProUGUI drumstickText; // UI hiển thị số đùi gà
+    public Text drumstickText; // UI hiển thị số đùi gà
 
 
     void Start()

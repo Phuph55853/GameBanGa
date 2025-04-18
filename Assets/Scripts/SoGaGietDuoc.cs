@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +8,7 @@ public class SoGaGietDuoc : MonoBehaviour
     public static SoGaGietDuoc instance;  // Singleton để dễ truy cập
     
     public int killCount = 0;            // Số gà đã giết
-    public TextMeshProUGUI killCountText;          // Text hiển thị điểm
+    public Text killCountText;          // Text hiển thị điểm
     public PlayerController playerController; // Tham chiếu tới PlayerController để tăng đạn và tốc độ
 
 

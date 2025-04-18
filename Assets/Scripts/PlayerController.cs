@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Shoot()
+    public void Shoot()
     {
         //Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
